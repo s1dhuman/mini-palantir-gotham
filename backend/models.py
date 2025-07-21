@@ -15,8 +15,8 @@ this table will store each crime event we ingest from the NYC API
 from sqlalchemy import Column, Integer, String, Float, DateTime
 from db import base
 
-class crimEvent(base) :
-    __tablename__ = "crume_events" # table name in db
+class CrimeEvent(base) :
+    __tablename__ = "crime_events" # table name in db
     
     # columns / parameters
     id = Column(Integer, primary_key=True, index=True)    # unique id for each of the event

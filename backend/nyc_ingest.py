@@ -13,7 +13,7 @@ import requests
 from datetime import datetime
 from sqlalchemy.orm import Session
 from db import sessionLocal, engine
-from models import crimEvent
+from models import CrimeEvent
 from models import base
 
 
@@ -56,7 +56,7 @@ def storeToDb(data):
             
             
             # create a new crimeEvent row
-            event = crimEvent(
+            event = CrimeEvent(
                 offense = offense,
                 borough = borough,
                 complaintDate = complaintDate,
