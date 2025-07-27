@@ -1,0 +1,20 @@
+/* App.css - Minimal styles for overrides */
+
+.App {
+  text-align: left;
+}
+
+/* Ensure smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Override any default button styles */
+button:focus {
+  outline: none;
+}
+
+/* Ensure proper height calculations */
+#root {
+  min-height: 100vh;
+}
