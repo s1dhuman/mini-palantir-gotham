@@ -1,0 +1,3 @@
+# This file ensures the data directory is tracked by git
+# Place your crime data CSV files in this directory
+# The ingestion script will automatically process files here

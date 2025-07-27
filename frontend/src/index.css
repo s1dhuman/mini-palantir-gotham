@@ -1,0 +1,167 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom scrollbar for dark theme */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1e293b;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #475569;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #64748b;
+}
+
+/* Leaflet map dark theme overrides */
+.leaflet-container {
+  background: #1e293b !important;
+}
+
+.leaflet-control-attribution {
+  background: rgba(30, 41, 59, 0.8) !important;
+  color: #cbd5e1 !important;
+}
+
+.leaflet-control-attribution a {
+  color: #6366f1 !important;
+}
+
+.leaflet-popup-content-wrapper {
+  background: #334155 !important;
+  color: #f1f5f9 !important;
+  border-radius: 8px !important;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3) !important;
+}
+
+.leaflet-popup-tip {
+  background: #334155 !important;
+}
+
+.leaflet-control-zoom a {
+  background: #334155 !important;
+  color: #f1f5f9 !important;
+  border-color: #475569 !important;
+}
+
+.leaflet-control-zoom a:hover {
+  background: #475569 !important;
+}
+
+/* Custom component styles */
+@layer components {
+  .card {
+    @apply bg-dark-800 border border-dark-700 rounded-lg shadow-lg;
+  }
+  
+  .card-header {
+    @apply px-6 py-4 border-b border-dark-700;
+  }
+  
+  .card-body {
+    @apply p-6;
+  }
+  
+  .btn-primary {
+    @apply bg-primary-600 hover:bg-primary-700 text-white font-medium py-2 px-4 rounded-md transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 focus:ring-offset-dark-900;
+  }
+  
+  .btn-secondary {
+    @apply bg-dark-700 hover:bg-dark-600 text-dark-200 font-medium py-2 px-4 rounded-md transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-dark-500 focus:ring-offset-2 focus:ring-offset-dark-900;
+  }
+  
+  .input-field {
+    @apply bg-dark-800 border border-dark-600 text-white rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent;
+  }
+  
+  .stat-card {
+    @apply bg-gradient-to-br from-dark-800 to-dark-700 p-6 rounded-lg border border-dark-600 hover:border-primary-500 transition-all duration-200 hover:shadow-glow;
+  }
+  
+  .glow-text {
+    @apply text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-primary-600;
+  }
+}
+
+/* Custom animations */
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 5px rgba(99, 102, 241, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(99, 102, 241, 0.8);
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s infinite;
+}
+
+/* Loading states */
+.skeleton {
+  @apply animate-pulse bg-dark-700 rounded;
+}
+
+/* Chart customizations */
+.recharts-cartesian-grid line {
+  stroke: #475569;
+}
+
+.recharts-text {
+  fill: #cbd5e1;
+}
+
+.recharts-legend-item-text {
+  color: #cbd5e1 !important;
+}
+
+/* Table styles */
+.data-table {
+  @apply min-w-full divide-y divide-dark-700;
+}
+
+.data-table thead {
+  @apply bg-dark-800;
+}
+
+.data-table th {
+  @apply px-6 py-3 text-left text-xs font-medium text-dark-300 uppercase tracking-wider;
+}
+
+.data-table tbody {
+  @apply bg-dark-900 divide-y divide-dark-700;
+}
+
+.data-table td {
+  @apply px-6 py-4 whitespace-nowrap text-sm text-dark-200;
+}
+
+.data-table tr:hover {
+  @apply bg-dark-800;
+}
+
+/* Map container */
+.map-container {
+  height: 400px;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #475569;
+}
+
+/* Responsive utilities */
+@media (max-width: 768px) {
+  .card-body {
+    @apply p-4;
+  }
+  
+  .card-header {
+    @apply px-4 py-3;
+  }
+}
