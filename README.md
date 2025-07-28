@@ -210,16 +210,4 @@ The project includes sample NYC crime data. To use real data:
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 🙏 Acknowledgments
 
-- Inspired by Palantir's Gotham platform
-- NYC Open Data for crime datasets
-- React and FastAPI communities
-
-## 📞 Support
-
-For questions and support, please open an issue or contact the maintainers.
-
----
-
-**Built with ❤️ for data intelligence and public safety analytics**
